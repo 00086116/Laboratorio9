@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
-import { FaTrashAlt } from 'react-icons/fa';
+import './index.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -101,12 +99,12 @@ class Formu extends React.Component {
                 </div>
 
                 <div className="form-group">
-                    <Form.Switch
+                <button
                         type="switch"
                         id="custom-switch"
                         label="Llegó tarde?"
-                        onChange={this.changeCheckHandler}
-                    />
+                        onChange={this.changeCheckHandler}	 >
+                        </button>
                 </div>
 
                 <div className="form-group">
@@ -159,7 +157,7 @@ class Table extends React.Component {
                             <td>{r.late}</td>
                             <td>
                                 <button className="btn btn-danger" onClick={() => this.handleDelete(index)}>
-                                    <FaTrashAlt />
+
                                 </button>
                             </td>
                         </tr>
